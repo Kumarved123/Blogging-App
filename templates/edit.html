@@ -1,0 +1,71 @@
+{% extends "basic.html" %}
+{% block body %}
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/home-bg.jpg') }}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>{{params['blog_name']}}</h1>
+              <span class="subheading">{{params['tag_line']}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+ <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <h1  class="post-subtitle" >Edit/ Delete Post</h1>
+
+
+            <form action="/edit/{{post.sno}}">
+                      <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="title">
+                      </div>
+                      <div class="form-group">
+                        <label for="tagline">Tagline</label>
+                        <input type="text" class="form-control" id="tagline" name="tagline" placeholder="tagline">
+                      </div>
+                      <div class="form-group">
+                        <label for="content">Content</label>
+                          <textarea type="text" class="form-control" id="content" name="content" placeholder="content"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label for="content">Slug</label>
+                        <input type="text" class="form-control" id="slug" name="slug" placeholder="slug">
+                      </div>
+                      <div class="form-group">
+                        <label for="img">Slug</label>
+                        <input type="text" class="form-control" id="img" name="img" placeholder="img.jpg">
+                      </div>
+                <button class="btn btn-primary float-left"> Submit</button>
+
+
+            </form>
+
+
+
+
+
+        </div>
+      </div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
